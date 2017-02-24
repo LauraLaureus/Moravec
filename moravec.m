@@ -4,7 +4,6 @@ close all;
 threshold = 0.5;
 I = imread('formas.png');
 
-
 h = conv2([1 -1],I);
 v = conv2([1 -1]',I);
 d1 = conv2([0 0 -1;0 0 0;1 0 0],I);
@@ -76,5 +75,7 @@ for i = 2:size(cn,1)-1
 end
 figure,imshow(cn),title('Final Corners');
 
-diferences =
-
+% [indi,indj] = ind2sub(size(cn),find(cn > 0));
+% indi = indi+1;
+% indj = indj+1;
+% figure,imshow(I),hold on,plot(indi,indj,'r*');
